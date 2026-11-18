@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargar datos de ejemplo – Firebase</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:#f4f6f5;color:#1a1a1a;padding:2rem 1rem;display:flex;justify-content:center}
+    .card{background:#fff;border-radius:14px;padding:2rem;max-width:620px;width:100%;box-shadow:0 8px 30px rgba(0,0,0,.07)}
+    h1{color:#0F6E56;font-size:1.3rem;margin-bottom:.4rem}
+    p.sub{color:#6b7280;font-size:13px;margin-bottom:1.2rem}
+    #log{background:#0F6E56;color:#e8fff8;border-radius:10px;padding:1rem;font-family:Consolas,monospace;font-size:12px;line-height:1.8;min-height:220px;max-height:420px;overflow:auto;white-space:pre-wrap}
+    button{margin-top:1rem;padding:11px 18px;border:none;border-radius:9px;background:#1D9E75;color:#fff;font-weight:700;font-size:14px;cursor:pointer;font-family:inherit}
+    button:hover{background:#0F6E56}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    a{display:inline-block;margin-top:1rem;color:#0F6E56;font-size:13px;font-weight:700}
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
+      "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js",
+      "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="card">
+    <h1>🌱 Cargar datos de ejemplo en Firestore</h1>
+    <p class="sub">Crea los usuarios demo y vuelca los vuelos, hoteles y paquetes de tu prototipo. Podés ejecutarlo las veces que quieras: no duplica datos.</p>
+    <div id="log">Listo para comenzar…</div>
+    <button id="btn-seed">Cargar datos</button><br>
+    <a href="index.html">← Volver a la app</a>
+  </div>
+  <script type="module" src="js/seed.js?v=2"></script>
+</body>
+</html>

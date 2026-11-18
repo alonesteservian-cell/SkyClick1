@@ -1,0 +1,145 @@
+/* ============================================================
+   Estilos extra para la capa Firebase (login, roles, avisos)
+   Los estilos originales de Index.html NO se tocan.
+   ============================================================ */
+
+/* --- Login --- */
+.fb-login {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #0F6E56 0%, #1D9E75 55%, #5DCAA5 100%);
+}
+.fb-login.show { display: flex; }
+
+.fb-login-card {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.fb-logo {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto .8rem;
+  border-radius: 50%;
+  background: var(--teal-lt);
+  color: var(--teal);
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fb-login-card h1 { font-size: 1.25rem; font-weight: 800; color: var(--teal-dk); }
+.fb-login-card > p { font-size: 13px; color: var(--muted); margin: .3rem 0 1.4rem; }
+.fb-login-card form { text-align: left; }
+.fb-login-card label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--muted);
+  margin: 0 0 5px;
+}
+.fb-login-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  background: var(--bg);
+}
+.fb-login-card input:focus { border-color: var(--teal); background: #fff; }
+.fb-btn {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 10px;
+  background: var(--teal);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s;
+}
+.fb-btn:hover { background: var(--teal-dk); }
+.fb-error { color: var(--coral); font-size: 12px; min-height: 16px; margin-bottom: 6px; }
+.fb-demo {
+  margin-top: 1.2rem;
+  padding: .9rem;
+  border-radius: 8px;
+  background: var(--teal-lt);
+  color: var(--teal-dk);
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* --- Nav con usuario real --- */
+.fb-rol {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--teal);
+  background: var(--teal-lt);
+  padding: 3px 7px;
+  border-radius: 20px;
+}
+.fb-logout {
+  margin-left: 4px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.fb-logout:hover { border-color: var(--teal); color: var(--teal-dk); }
+
+/* --- Aviso de configuración pendiente --- */
+.fb-setup {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(26, 26, 26, .65);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.fb-setup-card {
+  max-width: 520px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+}
+.fb-setup-card h2 { color: var(--teal-dk); font-size: 1.2rem; margin-bottom: .6rem; }
+.fb-setup-card p { color: var(--muted); font-size: 13px; margin-bottom: .8rem; }
+.fb-setup-card ol { margin-left: 1.2rem; color: var(--text); font-size: 13px; line-height: 1.9; }
+.fb-setup-card code {
+  background: var(--teal-lt);
+  color: var(--teal-dk);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .nav-user span, .fb-rol { display: none; }
+}
